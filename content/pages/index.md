@@ -38,4 +38,7 @@ sections:
           Set up global styles and add a styling toolbar to individual
           components in the visual editor.
         url: 'https://docs.stackbit.com/how-to-guides/styles/'
+  - type: PostFeed
+    heading: Post Feed Title
+    subheading: Subheading goes here ...
 ---

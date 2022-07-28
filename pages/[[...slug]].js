@@ -32,7 +32,21 @@ export default FlexiblePage;
 
 export function getStaticProps({ params }) {
   const url = '/' + (params.slug || []).join('/');
-  return { props: { page: urlToContent(url), siteConfig: siteConfig() } };
+  let page = urlToContent(url);
+
+  // Get all posts and sort by date, newest first
+  let posts = Object.values(pagesByType('Post'));
+  posts = posts.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  // If there's any PostFeed component in the sections list,
+  //inject the posts data to it. How would you make this more generic?
+  page.sections.map((section) => {
+    if (section.type === 'PostFeed') section.posts = posts;
+  });
+
+  return { props: { page, siteConfig: siteConfig() } };
 }
 
 export function getStaticPaths() {

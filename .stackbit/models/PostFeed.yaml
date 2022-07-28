@@ -1,0 +1,13 @@
+name: PostFeed
+label: Post Feed
+labelField: heading
+groups:
+  - SectionComponents
+fields:
+  - type: string
+    name: heading
+    default: Post Feed Title
+  - type: markdown
+    name: subheading
+    default: Subheading goes here ...
+    
