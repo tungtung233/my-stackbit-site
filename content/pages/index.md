@@ -14,6 +14,17 @@ sections:
       - label: Read the Docs
         url: 'https://docs.stackbit.com/'
         theme: secondary
+  - type: PostFeed
+    heading: Recent Posts
+    subheading: Here is a list of recent posts.
+    styles:
+      self:
+        padding:
+          top: '32'
+          bottom: '32'
+      heading:
+        margin:
+          bottom: '32'
   - type: CardGridSection
     heading: Jump to Topic
     subheading: |
@@ -41,4 +52,12 @@ sections:
   - type: PostFeed
     heading: Post Feed Title
     subheading: Subheading goes here ...
+    styles:
+      self:
+        padding:
+          top: '32'
+          bottom: '32'
+      heading:
+        margin:
+          bottom: '32'
 ---
